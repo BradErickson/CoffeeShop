@@ -85,4 +85,3 @@ C:\Users\brade\Documents\Visual Studio 2015\Projects\CoffeeShop\coffeeshop\bin\M
 C:\Users\brade\Documents\Visual Studio 2015\Projects\CoffeeShop\coffeeshop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\brade\Documents\Visual Studio 2015\Projects\CoffeeShop\coffeeshop\obj\Release\coffeeshop.dll
 C:\Users\brade\Documents\Visual Studio 2015\Projects\CoffeeShop\coffeeshop\obj\Release\coffeeshop.pdb
-C:\Users\brade\documents\visual studio 2015\Projects\coffeeshop\coffeeshop\obj\Release\coffeeshop.csprojResolveAssemblyReference.cache
