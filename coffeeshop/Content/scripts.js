@@ -38,10 +38,7 @@ function refreshCart() {
         }
     }
     for (var j in session) {
-        var itemHtml = document.getElementsByClassName('item');
-        var priceHtml = document.getElementsByClassName('price');
-        priceHtml.innerHTML = session[j];
-        $(".item").append('<div class="col-xs-12"><b>Item: ' + session[j].split(',')[0] + '</b></div><div class="col-xs-12"><b>Each: ' + session[j].split(',')[1] + '</div></b>' + '</b></div><div class="col-xs-12"><b>Quantity: ' + session[j].split(',')[2] + '</div></b><hr>');
+        $(".shoppingCartItem").append('<div class="col-xs-12"><b>Item: ' + session[j].split(',')[0] + '</b></div><div class="col-xs-12"><b>Each: ' + session[j].split(',')[1] + '</div></b>' + '</b></div><div class="col-xs-12"><b>Quantity: ' + session[j].split(',')[2] + '</div></b><hr>');
     }
 }
 
