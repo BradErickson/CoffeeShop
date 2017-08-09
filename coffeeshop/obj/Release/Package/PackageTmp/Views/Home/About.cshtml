@@ -1,0 +1,64 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12 text-center">
+                @{
+                    ViewBag.Title = "Products";
+                }
+                <h1 class="productsHeader">@ViewBag.Title</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <img style="max-width:200px;" src="https://blog.sprinklebit.com/wp-content/uploads/2014/07/coffee-smile.jpg" alt="Small Coffee"/>
+                            <p class="descriptionText">Small Coffee Delivery</p>
+                            <p>Price: 6.00</p>
+                            <button onclick="addToCart('small coffee')" class="btn btn-default">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <img style="max-width:200px;" src="http://www.menshealth.com/sites/menshealth.com/files/coffee-mug.jpg" alt="Medium Coffee" />
+                            <p class="descriptionText">Medium Coffee Delivery</p>
+                            <p>Price: 6.50</p>
+                            <button onclick="addToCart('medium coffee')" class="btn btn-default">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <img style="max-width:200px;" src="http://i.dailymail.co.uk/i/pix/2016/11/15/15/147A930600000514-3935344-image-a-1_1479225032170.jpg" alt="Large Coffee" />
+                            <p class="descriptionText">Large Coffee Delivery</p>
+                            <p>Price: 7.00</p>
+                            <button onclick="addToCart('large coffee')" class="btn btn-default">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <img style="max-width:200px; max-height: 200px;" src="https://www.panerabread.com/foundation/menu/details/caffe-mocha-large.jpg/_jcr_content/renditions/caffe-mocha-large.desktop.jpeg" alt="Small Mocha" />
+                            <p class="descriptionText">Small Mocha Delivery</p>
+                            <p>Price: 6.25</p>
+                            <button onclick="addToCart('small mocha')" class="btn btn-default">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <img style="max-width:200px; max-height: 112px;" src="https://www.kenyabuzz.com/media/uploads/directory/Mocha-Coffee-412x348.jpg" alt="Medium Mocha" />
+                            <p class="descriptionText">Medium Mocha Delivery</p>
+                            <p>Price: 6.75</p>
+                            <button onclick="addToCart('medium mocha')" class="btn btn-default">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <img style="max-width:200px; max-height: 112px;" src="http://bleubistrocc.com/wp-content/uploads/2012/07/cafe-mocha-988x1482.jpg" alt="Large Mocha" />
+                            <p class="descriptionText">Large Mocha Delivery</p>
+                            <p>Price: 7.25</p>
+                            <button onclick="addToCart('large mocha')" class="btn btn-default">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

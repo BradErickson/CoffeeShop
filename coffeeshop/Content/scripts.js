@@ -13,7 +13,7 @@ function addToCart(item) {
     console.log("here", json[shoppingCartItems[0]]);
     var selected = json[shoppingCartItems[0]];
     sessionStorage.setItem(json[shoppingCartItems[0]].name, [json[shoppingCartItems[0]].name, json[shoppingCartItems[0]].price]);
-    window.location.href = "checkout";
+    //window.location.href = "checkout";
 }
 $(document).ready(function () {
     refreshCart();
@@ -26,7 +26,6 @@ function refreshCart() {
             session[json[i].name] = ses;
         }
     }
-
     for (var j in session) {
         var itemHtml = document.getElementsByClassName('item');
         var priceHtml = document.getElementsByClassName('price');
