@@ -14,11 +14,6 @@ function addToCart(item) {
     var selected = json[shoppingCartItems[0]];
     sessionStorage.setItem(json[shoppingCartItems[0]].name, [json[shoppingCartItems[0]].name, json[shoppingCartItems[0]].price]);
     window.location.href = "checkout";
-    //var itemHtml = document.getElementsByClassName('item');
-    //var priceHtml = document.getElementsByClassName('price');
-    //console.log("here", json.shoppingCartItems[0].name);
-    //itemHtml.innerHTML = json.shoppingCartItems[0].name;
-
 }
 
 function refreshCart() {
@@ -37,4 +32,9 @@ function refreshCart() {
         $(".item").append("<b>" + session[j].split(',')[0] + "</b>");
         $(".price").append("<b>" + session[j].split(',')[1] + "</b>");
     }
+}
+
+function clearCart() {
+    sessionStorage.clear();
+    window.location.reload();
 }
