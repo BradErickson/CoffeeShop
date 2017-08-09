@@ -70,7 +70,6 @@ c:\users\brade\documents\visual studio 2015\Projects\coffeeshop\coffeeshop\bin\M
 c:\users\brade\documents\visual studio 2015\Projects\coffeeshop\coffeeshop\bin\Microsoft.Owin.Security.Google.xml
 c:\users\brade\documents\visual studio 2015\Projects\coffeeshop\coffeeshop\bin\Microsoft.Owin.Security.Twitter.xml
 c:\users\brade\documents\visual studio 2015\Projects\coffeeshop\coffeeshop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-c:\users\brade\documents\visual studio 2015\Projects\coffeeshop\coffeeshop\obj\Debug\coffeeshop.csprojResolveAssemblyReference.cache
 c:\users\brade\documents\visual studio 2015\Projects\coffeeshop\coffeeshop\obj\Debug\coffeeshop.dll
 c:\users\brade\documents\visual studio 2015\Projects\coffeeshop\coffeeshop\obj\Debug\coffeeshop.pdb
 c:\users\brade\documents\visual studio 2015\Projects\coffeeshop\coffeeshop\bin\ApplicationInsights.config
