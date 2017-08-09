@@ -1,4 +1,5 @@
 ﻿var shoppingCartItems = [];
+var quantity = 1;
 var json = {
     "small coffee": { 'price': '6.00', 'name': 'Small Coffee' },
     "medium coffee": { 'price': '6.50', 'name': 'Medium Coffee' },
@@ -8,12 +9,22 @@ var json = {
     "large mocha": { 'price': '7.25', 'name': 'Large Mocha' },
 }
 function addToCart(item) {
+    
+    $('#myModal').modal();
+    $(".itemAdded").remove();
+    $('.modal-body').append('<p class="itemAdded" style="text-align:center"> A ' + item + " has been successfully added to your shopping cart</p>");
     shoppingCartItems = [];
     shoppingCartItems.push(item);
-    console.log("here", json[shoppingCartItems[0]]);
     var selected = json[shoppingCartItems[0]];
-    sessionStorage.setItem(json[shoppingCartItems[0]].name, [json[shoppingCartItems[0]].name, json[shoppingCartItems[0]].price]);
-    //window.location.href = "checkout";
+    
+    if (sessionStorage.getItem(json[shoppingCartItems[0]].name)) {
+        var quan = parseInt(sessionStorage.getItem(json[shoppingCartItems[0]].name).split(',')[2]);
+        quan++;
+        sessionStorage.setItem(json[shoppingCartItems[0]].name, [json[shoppingCartItems[0]].name, json[shoppingCartItems[0]].price, quan]);
+    } else {
+        sessionStorage.setItem(json[shoppingCartItems[0]].name, [json[shoppingCartItems[0]].name, json[shoppingCartItems[0]].price, 1]);
+    }
+    
 }
 $(document).ready(function () {
     refreshCart();
@@ -30,7 +41,7 @@ function refreshCart() {
         var itemHtml = document.getElementsByClassName('item');
         var priceHtml = document.getElementsByClassName('price');
         priceHtml.innerHTML = session[j];
-        $(".item").append('<div class="col-xs-12"><b>' + session[j].split(',')[0] + '</b></div><div class="col-xs-12"><b>' + session[j].split(',')[1] + '</div></b>');
+        $(".item").append('<div class="col-xs-12"><b>Item: ' + session[j].split(',')[0] + '</b></div><div class="col-xs-12"><b>Each: ' + session[j].split(',')[1] + '</div></b>' + '</b></div><div class="col-xs-12"><b>Quantity: ' + session[j].split(',')[2] + '</div></b>');
     }
 }
 

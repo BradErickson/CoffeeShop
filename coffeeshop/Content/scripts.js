@@ -9,6 +9,10 @@ var json = {
     "large mocha": { 'price': '7.25', 'name': 'Large Mocha' },
 }
 function addToCart(item) {
+    
+    $('#myModal').modal();
+    $(".itemAdded").remove();
+    $('.modal-body').append('<p class="itemAdded" style="text-align:center"> A ' + item + " has been successfully added to your shopping cart</p>");
     shoppingCartItems = [];
     shoppingCartItems.push(item);
     var selected = json[shoppingCartItems[0]];
@@ -18,7 +22,6 @@ function addToCart(item) {
         quan++;
         sessionStorage.setItem(json[shoppingCartItems[0]].name, [json[shoppingCartItems[0]].name, json[shoppingCartItems[0]].price, quan]);
     } else {
-        
         sessionStorage.setItem(json[shoppingCartItems[0]].name, [json[shoppingCartItems[0]].name, json[shoppingCartItems[0]].price, 1]);
     }
     
