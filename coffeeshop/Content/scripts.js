@@ -29,8 +29,8 @@ function refreshCart() {
         var itemHtml = document.getElementsByClassName('item');
         var priceHtml = document.getElementsByClassName('price');
         priceHtml.innerHTML = session[j];
-        $(".item").append("<b>" + session[j].split(',')[0] + "</b>");
-        $(".price").append("<b>" + session[j].split(',')[1] + "</b>");
+        $(".item").append('<div class="col-xs-12"><b>' + session[j].split(',')[0] + "</b></div>");
+        $(".price").append('<div class="col-xs-12"><b>' + session[j].split(',')[1] + "</b></div>");
     }
 }
 
