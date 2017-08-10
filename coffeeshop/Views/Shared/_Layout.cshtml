@@ -7,13 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Coffee Shop Dev Ops CSC-410</title>
-   
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Site.css" rel="stylesheet" />
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="~/Content/css/business-casual.css" rel="stylesheet" />
+    <link href="css/business-casual.css" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
@@ -25,6 +22,8 @@
     <![endif]-->
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content/css/business-casual.css" rel="stylesheet" />
 </head>
 <body>
     <div class="brand">Dev Ops Coffee Shop</div>
@@ -101,5 +100,12 @@
         interval: 5000 //changes the speed
     })
     </script>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/scripts.js"></script>
+    @RenderSection("scripts", required: false)
 </body>
 </html>
