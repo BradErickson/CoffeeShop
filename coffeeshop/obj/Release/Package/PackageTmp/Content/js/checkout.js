@@ -42,7 +42,7 @@ function getTotals() {
         var amount = parseFloat(items[j].split(',')[2]);
         totals.push(price * amount);
     }
-    if (totals) {
+    if (totals.length) {
         return totals.reduce(function (a, b) {
             return a + b;
         });
