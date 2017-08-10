@@ -1,5 +1,6 @@
 ﻿var shoppingCartItems = [];
 var quantity = 1;
+var session;
 var json = {
     "small coffee": { 'price': '6.00', 'name': 'Small Coffee' },
     "medium coffee": { 'price': '6.50', 'name': 'Medium Coffee' },
@@ -27,35 +28,35 @@ function addToCart(item) {
     
 }
 $(document).ready(function () {
-    refreshCart();
+    getItemsFromSession();
 });
-function refreshCart() {
+function getItemsFromSession() {
     var session = {};
+    
     for (var i in json) {
         var ses = sessionStorage.getItem(json[i].name);
         if (ses) {
             session[json[i].name] = ses;
         }
     }
+    this.session = session;
+    refreshCart();
+}
+function refreshCart() {
+   var items = this.session
     for (var j in session) {
-        $(".shoppingCartItem").append('<div class="col-xs-12"><b>Item: ' + session[j].split(',')[0] + '</b></div><div class="col-xs-12"><b>Each: ' + session[j].split(',')[1] + '</div></b>' + '</b></div><div class="col-xs-12"><b>Quantity: ' + session[j].split(',')[2] + '</div></b><hr>');
+        $(".shoppingCartItem").append('<div class="col-xs-12"><b>Item: ' + items[j].split(',')[0] + '</b></div><div class="col-xs-12"><b>Each: ' + items[j].split(',')[1] + '</div></b>' + '</b></div><div class="col-xs-12"><b>Quantity: ' + items[j].split(',')[2] + '</div></b><hr>');
     }
     var checkoutTotal = getTotals().toFixed(2);
     $("#checkoutTotal").html('<p>Order Total: ' + checkoutTotal + "</p>");
 }
 
 function getTotals(){
-    var session = {};
+    var items = this.session;
     var totals = [];
-    for (var i in json) {
-        var ses = sessionStorage.getItem(json[i].name);
-        if (ses) {
-            session[json[i].name] = ses;
-        }
-    }
-    for (var j in session) {
-        var price = parseFloat(session[j].split(',')[1]);
-        var amount = parseFloat(session[j].split(',')[2]);
+    for (var j in items) {
+        var price = parseFloat(items[j].split(',')[1]);
+        var amount = parseFloat(items[j].split(',')[2]);
         totals.push(price * amount);
     }
     return totals.reduce(function (a, b) {
