@@ -53,6 +53,10 @@ hr {
     letter-spacing: 3px;
 }
 
+.shoppingCartItem hr {
+    border: 2px solid !important;
+    max-height: 2px;
+}
 .img-full {
     min-width: 100%;
 }
