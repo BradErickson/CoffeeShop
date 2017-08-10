@@ -42,9 +42,14 @@ function getTotals() {
         var amount = parseFloat(items[j].split(',')[2]);
         totals.push(price * amount);
     }
-    return totals.reduce(function (a, b) {
-        return a + b;
-    });
+    if (totals) {
+        return totals.reduce(function (a, b) {
+            return a + b;
+        });
+    } else {
+        return 0;
+    }
+   
 }
 function clearCart() {
     sessionStorage.clear();
