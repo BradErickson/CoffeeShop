@@ -13,6 +13,7 @@ var json = {
 $(document).ready(function () {
     getItemsFromSession();
 });
+
 function getItemsFromSession() {
     var session = {};
 
@@ -25,6 +26,7 @@ function getItemsFromSession() {
     this.session = session;
     refreshCart();
 }
+
 function refreshCart() {
     var items = this.session
     for (var j in session) {
