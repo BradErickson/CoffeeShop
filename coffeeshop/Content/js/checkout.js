@@ -53,6 +53,10 @@ function getTotals() {
     }
    
 }
+function placeOrder() {
+    alert("Order Placed Successfully!");
+    clearCart();
+}
 function clearCart() {
     sessionStorage.clear();
     window.location.reload();

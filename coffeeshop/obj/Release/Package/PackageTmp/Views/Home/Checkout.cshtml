@@ -2,11 +2,45 @@
     <div class="row">
         <div class="box">
             <div class="col-lg-12 text-center">
-                   <h2>Order Summary</h2>
-                   <button class="btn btn-block btn-danger" id="clearCart" onclick="clearCart()">Clear Cart</button>
-                   <p class="shoppingCartItem"></p>
+                <h2>Order Summary</h2>
+                <button class="btn btn-block btn-danger" id="clearCart" onclick="clearCart()">Clear Cart</button>
+                <p class="shoppingCartItem"></p>
             </div>
             <div id="checkoutTotal" class="col-lg-12 text-right"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="box">
+            <div>
+                <div class="col-xs-12 text-center">
+                    <h2>Billing Information</h2>
+                </div>
+                <div class="col-xs-12 col-lg-4 col-lg-offset-2">
+                    <label for="firstname">First Name</label>
+                    <input class="form-control" type="text" id="firstname">
+                    <label for="lastname">Last Name</label>
+                    <input class="form-control" type="text" id="lastname">
+                    <label for="phone">Phone</label>
+                    <input class="form-control" type="tel" id="phone">
+                    <label for="Address">Address</label>
+                    <input class="form-control" type="text" id="Address">
+                    <label for="city">City</label>
+                    <input class="form-control" type="text" id="city">
+                    <label for="state">State</label>
+                    <input class="form-control" type="text" id="State">
+                </div>
+                <div class="col-lg-3">
+                    <label for="cc">Credit Card Number</label>
+                    <input class="form-control" type="number" id="cc">
+                    <label for="sec">Security Code</label>
+                    <input class="form-control" type="text" id="sec">
+                    <label for="exp">Expiration Date</label>
+                    <input required class="form-control" type="date" id="exp">
+                    <button class="btn btn-success" style="margin-top:15px;" type="submit" onclick="placeOrder()">Place Order</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
