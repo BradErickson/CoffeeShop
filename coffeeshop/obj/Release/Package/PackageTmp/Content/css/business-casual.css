@@ -194,7 +194,9 @@ footer p {
         font-size: 1.25em;
     }
 }
-
+.modal-title {
+    text-align: center;
+}
 @media screen and (min-width:1200px) {
     .box:after {
         content: '';

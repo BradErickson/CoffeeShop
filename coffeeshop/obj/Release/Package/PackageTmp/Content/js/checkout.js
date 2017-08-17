@@ -54,8 +54,9 @@ function getTotals() {
    
 }
 function placeOrder() {
-    alert("Order Placed Successfully!");
-    clearCart();
+    $("#checkoutModal").modal().on('hidden.bs.modal', function () {
+        clearCart();
+    });
 }
 function clearCart() {
     sessionStorage.clear();
