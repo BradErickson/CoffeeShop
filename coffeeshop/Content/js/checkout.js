@@ -11,12 +11,13 @@ var json = {
 }
 
 $(document).ready(function () {
+    //load shopping cart items on initial page load
     getItemsFromSession();
 });
 
 function getItemsFromSession() {
     var session = {};
-
+   //loop through all of the session items return an object with all items
     for (var i in json) {
         var ses = sessionStorage.getItem(json[i].name);
         if (ses) {
@@ -28,6 +29,7 @@ function getItemsFromSession() {
 }
 
 function refreshCart() {
+    //append items to the shopping cart so the user has a clean view of them
     var items = this.session
     for (var j in session) {
         $(".shoppingCartItem").append('<div class="col-xs-12"><b>Item: ' + items[j].split(',')[0] + '</b></div><div class="col-xs-12"><b>Each: ' + items[j].split(',')[1] + '</div></b>' + '</b></div><div class="col-xs-12"><b>Quantity: ' + items[j].split(',')[2] + '</div><hr style="margin-top:15px;">');
@@ -54,11 +56,13 @@ function getTotals() {
    
 }
 function placeOrder() {
+    //fake submit form and pop up modal for user 
     $("#checkoutModal").modal().on('hidden.bs.modal', function () {
         clearCart();
     });
 }
 function clearCart() {
+    //clear out session storage and reload the page to clear shopping cart.
     sessionStorage.clear();
     window.location.reload();
 }

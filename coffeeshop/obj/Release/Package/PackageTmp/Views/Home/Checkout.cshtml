@@ -17,29 +17,31 @@
                 <div class="col-xs-12 text-center">
                     <h2>Billing Information</h2>
                 </div>
-                <div class="col-xs-12 col-lg-4 col-lg-offset-2">
-                    <label for="firstname">First Name</label>
-                    <input class="form-control" type="text" id="firstname">
-                    <label for="lastname">Last Name</label>
-                    <input class="form-control" type="text" id="lastname">
-                    <label for="phone">Phone</label>
-                    <input class="form-control" type="tel" id="phone">
-                    <label for="Address">Address</label>
-                    <input class="form-control" type="text" id="Address">
-                    <label for="city">City</label>
-                    <input class="form-control" type="text" id="city">
-                    <label for="state">State</label>
-                    <input class="form-control" type="text" id="State">
-                </div>
-                <div class="col-lg-3">
-                    <label for="cc">Credit Card Number</label>
-                    <input class="form-control" type="number" id="cc">
-                    <label for="sec">Security Code</label>
-                    <input class="form-control" type="text" id="sec">
-                    <label for="exp">Expiration Date</label>
-                    <input required class="form-control" type="date" id="exp">
-                    <button class="btn btn-success" style="margin-top:15px;" type="submit" onclick="placeOrder()">Place Order</button>
-                </div>
+                <form onsubmit="placeOrder()">
+                    <div class="col-xs-12 col-lg-4 col-lg-offset-2">
+                        <label for="firstname">First Name</label>
+                        <input class="form-control" required type="text" id="firstname">
+                        <label for="lastname">Last Name</label>
+                        <input class="form-control" required type="text" id="lastname">
+                        <label for="phone">Phone</label>
+                        <input class="form-control" required type="tel" id="phone">
+                        <label for="Address">Address</label>
+                        <input class="form-control" required type="text" id="Address">
+                        <label for="city">City</label>
+                        <input class="form-control" required type="text" id="city">
+                        <label for="state">State</label>
+                        <input class="form-control" required type="text" id="State">
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="cc">Credit Card Number</label>
+                        <input class="form-control" required type="number" id="cc">
+                        <label for="sec">Security Code</label>
+                        <input class="form-control" required type="text" id="sec">
+                        <label for="exp">Expiration Date</label>
+                        <input required class="form-control" type="date" id="exp">
+                        <button class="btn btn-success" style="margin-top:15px;" type="submit" onclick="">Place Order</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
